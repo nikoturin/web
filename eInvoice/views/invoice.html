@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/esqueleto.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/960.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="stylesheets/transparent.css" />
+
+
+<!-- js menu navbar-->
+<script type="text/javascript" src='javascripts/includeGlobal/jquery.min.js'></script>
+<script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.4/underscore-min.js"></script>
+<script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
+
+<!-- js pagination-->
+<script type="text/javascript" src="javascripts/includeGlobal/jquery.pajinate.js"></script>
+
+<!-- js flightSchedule-->
+<script type="text/javascript" src="javascripts/lib/handlebars.js"></script>
+<script type="text/javascript" src="javascripts/utils/helpers.js"></script>
+<script type="text/javascript" src="javascripts/utils/validate.js"></script>
+<script type="text/javascript" src="javascripts/lib/require.js"></script>
+<script type="text/javascript" src="javascripts/require.config.js"></script>
+<script type="text/javascript" src="javascripts/templateSearch.js"></script>
+<script type="text/javascript" src="javascripts/transparent.js"></script>
+</head>
+<body id="bg" class="bg"> 
+    <div style="width:73%;margin:0 auto;height:1500px;position:relative;top:-30px;Verdana;BACKGROUND-COLOR: #fff;">
+	    <div style="position:absolute;Verdana;BACKGROUND-COLOR: #EFF0F4;border-radius: 9px 9px 9px 9px; width:800px;top:50%;left:50%;margin:-700px 0 0 -400px;">
+	    	<img src='../images/xxx_logo.png'>
+                <div class="headerLanguages">                        
+			<a class="languageSelection langEN" href="" target="_blank"></a>                        
+			<a class="languageSelection langMX" href="" target="_blank"></a>                
+		</div>
+        	<div class="headerBookmarks">
+                	<a class="socialBookmark markFacebook" href="https://www.facebook.com/xxxxx" target="_blank"></a>
+                        <a class="socialBookmark markTwitter" href="https://twitter.com/xxxxx" target="_blank"></a>
+		</div>
+	    </div>
+            <div align="center" style="position:absolute;Verdana;BACKGROUND-COLOR: #FFF;border-radius: 9px 9px 9px 9px; width:800px;top:50%;left:50%;margin:-610px 0 0 -400px;">    			
+		<b style="font-size:20px;COLOR:#A4A4A4;">FACTURACI&Oacute;N ELECTR&Oacute;NICA</b>
+
+            </div>
+            <div align="center" style="position:absolute;Verdana;BACKGROUND-COLOR: #D8D8D8;border-radius: 9px 9px 9px 9px; width:800px;top:50%;left:50%;margin:-580px 0 0 -400px;">                      
+                <div align="left" style="width:666px;height:25px;top:50%;left:100%;BACKGROUND-COLOR:#D8D8D8">
+                        <input type='text' id='trfc' value="RFC:" style="height:14px;BACKGROUND-COLOR:#D8D8D8;border:1px;font-size:12px;box-shadow: none;"  readonly />
+                </div>
+            	<div align="left" style="width:666px;height:25px;top:50%;left:100%;BACKGROUND-COLOR:#D8D8D8"> 
+        	        <input type='text' id='rfc' style='height:14px;'/>
+		</div>
+                <div align="center" style="width:666px;height:25px;top:50%;left:100%;BACKGROUND-COLOR:##D8D8D8">
+                        <input type='text' id='tlocator'  value="CLAVE DE CONFIRMACION:" style="height:14px;BACKGROUND-COLOR:#D8D8D8;border-width:0;font-size:12px;box-shadow: none;" readonly/>
+
+                        <input type='text' id='tnombre' value="NOMBRE:" style="height:14px;BACKGROUND-COLOR:#D8D8D8;border-width:0;font-size:12px;box-shadow: none;" readonly/>
+
+                        <input type='text' id='tapellido'  value="APELLIDO:" style="height:14px;BACKGROUND-COLOR:#D8D8D8;border-width:0;font-size:12px;box-shadow: none;" readonly/>
+                </div>
+                <div align="center" style="width:666px;height:40px;top:50%;left:100%;BACKGROUND-COLOR:#D8D8D8">
+        	        <input type='text' id='locator'  style='height:14px;'  />
+
+        	        <input type='text' id='nombre'  style='height:14px;' />
+
+        	        <input type='text' id='apellido' style='height:14px;'  />
+                </div>
+                <div align="left" style="width:666px;top:50%;left:100%;BACKGROUND-COLOR:#D8D8D8">
+                 	<b style="font-size:15px;COLOR:#FF0000">Nota:</b><b style="font-size:10px;COLOR:#FFF">Capture el nombre(s) y apellido(s) tal y como aparece en su correo de confirmaci&oacuten</b>
+		</div>
+                <div align="right" style="width:800px;top:50%;left:100%;BACKGROUND-COLOR:#D8D8D8">
+                        <a href="#" id="btn-searchInvoice" class="btn btn-search">BUSCAR</a>
+                        <a href="http://facturacion.xxxxx.com/invoiceGuide" class="btn btn-search">GUIA</a>
+                        <a href="http://facturacion.xxxxx.com/invoiceEditData" class="btn btn-search">EDITAR DATOS</a>
+                        <a href="http://facturacion.xxxxx.com/invoiceReSendGuide" class="btn btn-search">RE-ENVIO</a>
+                </div>
+
+            </div>
+            <div id="contenedor" class="contenedor" align="center" style="position:absolute;Verdana;BACKGROUND-COLOR: #D8D8D8;border-radius: 9px 9px 9px 9px; width:800px;top:50%;left:50%;margin:-400px 0 0 -400px;">  		     
+           </div>
+           <div id="paging_container">
+       	   </div> 
+    </div>
+
+  </body>
+</html>

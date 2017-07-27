@@ -1,0 +1,26 @@
+######  Per installation  #######
+export RRTDBNAME=vbwebdbq
+#export WSNADDR="//10.4.53.43:38000"
+export WSNADDR="//10.4.53.36:38000"
+
+######  No changes  #############
+source ~/tuxedo/settings.env
+source ~/informix/settings.env
+
+export FIELDTBLS32=commbuff.flds
+export FIELDTBLS=commbuff.flds
+
+export RESULTS=$HOME/3rdparty
+export RVTXDIR=$RESULTS
+export TUXCONFIG=$RESULTS/TUXCONFIG
+export APPDIR=$RESULTS
+export FLDTBLDIR32=$RESULTS
+export FLDTBLDIR=$RESULTS
+export ROOTDIR=$TUXDIR
+export LANG=C
+export LD_LIBRARY_PATH=$RESULTS/cups/lib/:$APPDIR/xercesc/lib:$APPDIR/xalanc/lib:$INFORMIXDIR/lib:$INFORMIXDIR/lib/esql:$RESULTS/icu/lib:$LD_LIBRARY_PATH
+export PATH=$RESULTS:$PATH
+#not needed for dist node
+#--#source $RESULTS/perl/settings.env
+
+export TZ=America/Mexico_City

@@ -1,0 +1,11 @@
+[{
+    "name"       : "prdvbweb",
+    "script"     : "app.js",
+    "instances"  : "10",
+    "log-date-format"  : "YYYY-MM-DD HH:mm Z",
+    "error_file" : "./logs/ULOG_stderr.log",
+    "out_file"   : "./logs/ULOG_out.log",
+    "pid_file"   : "./pids/node_geo_api.pid",
+    "cron_restart"     : "*/20 * * * *",
+    "exec_mode"  : "cluster_mode"
+}]
